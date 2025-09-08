@@ -21,18 +21,40 @@
 }
 
 .clientImgs {
-    margin: 1rem 0;
-    display: flex;
-    flex-wrap: wrap;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row by default */
+  gap: 1rem;
+}
+
+.clientImgWrapper {
+  width: 100%;
+  border-radius: 12px;   /* rounded corners */
+  overflow: hidden;      /* crops the zoomed image */
 }
 
 .clientImg {
-    object-fit: cover;
-    width: 23%;
-    min-width: 9rem;
-    margin: auto;
-    padding: 0.25rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);   /* zoom the image */
+  transition: transform 0.4s ease; /* smooth hover effect */
+  cursor: pointer;
 }
+
+.clientImg:hover {
+  transform: scale(1.2);   /* zoom more on hover */
+}
+
+
+/* On small screens (e.g., below 768px), show 1 per row */
+@media (max-width: 768px) {
+  .clientImgs {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 #clients {
     padding: 2rem;
@@ -54,7 +76,9 @@
     max-width: 60rem;
 }
 
-.name, .email, .msg {
+.name,
+.email,
+.msg {
     font-size: medium;
     width: 100%;
     max-width: 40rem;

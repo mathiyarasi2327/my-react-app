@@ -25,24 +25,32 @@ const Contact = () => {
                 console.log(error.text);
             });
     };
-    
+
     return (
         <div id='contactPage'>
             <div id="clients">
                 <h1 className="contactPageTitle">My Project</h1>
                 <span className="clientDesc">
-                   Here are some of the projects I have worked on during my learning journey. These projects helped me practice my skills in web design and development.
+                    Here are some of the projects I have worked on during my learning journey. These projects helped me practice my skills in web design and development.
                 </span>
                 <div className="clientImgs">
-                    <img src={Walmart} alt="Client" className="clientImg" />
-                    <img src={Adobe} alt="Client" className="clientImg" />
-                    <img src={Microsoft} alt="Client" className="clientImg" />
-                    <img src={Facebook} alt="Client" className="clientImg" />                   
+                    <a href="https://mathiyarasi2327.github.io/Digital-clock/" target="_blank" className="clientImgWrapper">
+                        <img src={Walmart} alt="Client" className="clientImg" />
+                    </a>
+                    <a href="https://mathiyarasi2327.github.io/BMI-Calculator/" target="_blank" className="clientImgWrapper">
+                        <img src={Adobe} alt="Client" className="clientImg" />
+                    </a>
+                    <a href="https://mathiyarasi232007.github.io/Mathiyarsi-s-Profile/" target="_blank" className="clientImgWrapper">
+                        <img src={Microsoft} alt="Client" className="clientImg" />
+                    </a>
+                    <a href="https://mathiyarasi2327.github.io/Responsive-Neumorphic-Calculator/" target="_blank" className="clientImgWrapper">
+                        <img src={Facebook} alt="Client" className="clientImg" />
+                    </a>
                 </div>
             </div>
             <div id="contact">
                 <h1 className="contactPageTitle">Contact Me</h1>
-                <span className="contactDesc">I’d love to connect with you! Whether you have an opportunity, want to collaborate, or just want to say hi — feel free to reach out.</span>
+                <span className="contactDesc">I'd love to connect with you! Whether you have an opportunity, want to collaborate, or just want to say hi — feel free to reach out.</span>
                 <form className="contactForm" ref={form} onSubmit={sendEmail}>
                     <input type="text" className="name" placeholder='Your name' name='from_name' />
                     <input type="text" className="email" placeholder='Your Email' name='from_email' />
