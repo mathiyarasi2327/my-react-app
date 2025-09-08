@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gitpugal.github.io/my-react-app",
+  "homepage": "https://mathiyarasi2327.github.io/my-react-app",
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
     "@tailwindcss/postcss": "^4.1.13",
