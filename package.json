@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://mathiyarasi2327.github.io/my-react-app",
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
